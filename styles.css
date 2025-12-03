@@ -1,0 +1,234 @@
+/* --- FUENTE --- */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg, #2b1055, #7597de);
+    padding: 20px;
+    color: #fff;
+}
+
+/* CONTENEDOR PRINCIPAL */
+.container {
+    max-width: 480px;
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(12px);
+    border-radius: 20px;
+    padding: 25px;
+    margin: auto;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
+
+/* TARJETA SUPERIOR (FOTO + INFO) */
+.card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+/* FOTO DE PERFIL */
+.profile-photo {
+    margin-bottom: 15px;
+}
+
+.photo-placeholder {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 4px solid rgba(255, 255, 255, 0.5);
+    box-shadow: 0 8px 15px rgba(0,0,0,0.3);
+}
+
+.profile-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* NOMBRES Y ROLES */
+.name {
+    font-weight: 600;
+    font-size: 1.15rem;
+    margin-top: 5px;
+}
+
+.role {
+    font-size: 0.95rem;
+    opacity: 0.9;
+}
+
+/* LINKS DE REDES SOCIALES */
+.links-container {
+    margin-top: 25px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.link-item {
+    display: flex;
+    align-items: center;
+    padding: 12px;
+    border-radius: 14px;
+    background: rgba(255, 255, 255, 0.18);
+    backdrop-filter: blur(8px);
+    color: #fff;
+    text-decoration: none;
+    transition: transform 0.2s ease, background 0.2s ease;
+}
+
+.link-item:hover {
+    transform: scale(1.03);
+    background: rgba(255, 255, 255, 0.28);
+}
+
+.link-icon {
+    font-size: 1.7rem;
+    margin-right: 12px;
+}
+
+.link-content {
+    flex: 1;
+}
+
+.link-title {
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+.link-subtitle {
+    font-size: 0.85rem;
+    opacity: 0.8;
+}
+
+/* FLECHA */
+.link-arrow {
+    font-size: 1.3rem;
+}
+
+/* FOOTER */
+.footer {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 0.9rem;
+    opacity: 0.9;
+}
+
+/* BOTÓN COMPARTIR */
+.share-button {
+    width: 100%;
+    margin-top: 25px;
+    padding: 12px;
+    background: #ffffff;
+    color: #000;
+    border: none;
+    border-radius: 14px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+.share-button:hover {
+    background: #dcdcdc;
+    transform: scale(1.02);
+}
+
+
+
+
+/* SECCIÓN INTEGRANTES */
+.integrantes {
+    margin-top: 40px;
+    text-align: center;
+}
+
+.integrantes h2 {
+    font-size: 1.8rem;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+/* GRID DE INTEGRANTES (3 COLUMNAS) */
+.integrantes-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+    margin-top: 20px;
+    padding: 0 10px;
+}
+
+/* TARJETA DE CADA INTEGRANTE */
+.integrante-item {
+    background: rgba(255, 255, 255, 0.18);
+    backdrop-filter: blur(8px);
+    border-radius: 18px;
+    padding: 12px;
+    text-align: center;
+    box-shadow: 0 6px 14px rgba(0,0,0,0.2);
+    transition: transform .2s ease, background .2s ease;
+}
+
+.integrante-item:hover {
+    transform: scale(1.04);
+    background: rgba(255,255,255,0.28);
+}
+
+/* FOTO */
+.integrante-foto {
+    width: 95px;
+    height: 95px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 10px;
+    border: 3px solid rgba(255, 255, 255, 0.7);
+}
+
+/* TEXTOS */
+.integrante-nombre {
+    font-weight: 600;
+    font-size: 0.9rem;
+}
+
+.integrante-cumple,
+.integrante-edad {
+    font-size: 0.8rem;
+    opacity: 0.9;
+}
+
+@keyframes cumpleAnim {
+    0% { box-shadow: 0 0 10px #ffcc00; }
+    50% { box-shadow: 0 0 20px #ffea00; }
+    100% { box-shadow: 0 0 10px #ffcc00; }
+}
+
+/* ------------------------ RESPONSIVE ------------------------ */
+
+/* Tablets (2 columnas) */
+@media (max-width: 768px) {
+    .integrantes-list {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Celulares (1 columna) */
+@media (max-width: 480px) {
+    .integrantes-list {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .integrante-foto {
+        width: 85px;
+        height: 85px;
+    }
+}
+
+ 
